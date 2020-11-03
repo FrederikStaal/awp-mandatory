@@ -2,7 +2,9 @@ import { addNewQuestion,
         getQuestions,
         getQuestionByID,
         updateQuestion,
-        deleteQuestion
+        deleteQuestion,
+        getAnswers,
+        addNewAnswer
 } from '../controllers/crmController';
 
 const routes = (app) => {
@@ -21,7 +23,15 @@ const routes = (app) => {
         .put(updateQuestion)
 
         // Delete specific Question by ID
-        .delete(deleteQuestion)
+        .delete(deleteQuestion);
+
+    app.route('/api/answers')
+        // Get all Answers
+        .get(getAnswers);
+
+    app.route('/api/answer')
+        // Create new Answer
+        .post(addNewAnswer);
 }
 
 export default routes;

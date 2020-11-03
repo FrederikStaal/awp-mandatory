@@ -26,7 +26,10 @@ function QuestionApp() {
         <>
             <h1>Questions</h1>
             {data.map(question => {
-        return <p key={question._id}>{question.name} ({question._id})</p>;
+        //return <p key={question._id}><h4>{question.title}</h4> {question.text}</p>;
+            return <div key={question._id}><h4>{question.title}</h4><p>{question.text}</p></div>
+            
+
       })}
             
         </>
