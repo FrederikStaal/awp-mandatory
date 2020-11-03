@@ -16,5 +16,3 @@ export const QuestionSchema = new Schema({
         default: Date.now
     }
 });
-
-// CONTINUE FROM CREATE POST ENDPOINT ON LINKEDIN LEARNING

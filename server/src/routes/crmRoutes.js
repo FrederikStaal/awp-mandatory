@@ -1,17 +1,27 @@
+import { addNewQuestion,
+        getQuestions,
+        getQuestionByID,
+        updateQuestion,
+        deleteQuestion
+} from '../controllers/crmController';
+
 const routes = (app) => {
     app.route('/question')
-        .get((req, res) =>
-        res.send('GET request succesful!'))
+        // Get all Questions
+        .get(getQuestions)
 
-        .post((req, res) =>
-        res.send('POST request succesful!'));
+        // Create new Question
+        .post(addNewQuestion);
 
     app.route('/question/:questionID')
-        .put((req, res) =>
-        res.send('PUT request succesful!'))
+        // Get specific Question by ID
+        .get(getQuestionByID)
 
-        .delete((req, res) =>
-        res.send('DELETE request succesful!'))
+        // Update specific Question by ID
+        .put(updateQuestion)
+
+        // Delete specific Question by ID
+        .delete(deleteQuestion)
 }
 
 export default routes;

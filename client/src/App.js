@@ -6,6 +6,7 @@ function App() {
   
   useEffect(() => {
     async function getData() {
+      //const url = `${API_URL}/kittens`;
       const url = `${API_URL}/kittens`;
       const response = await fetch(url);
       const data = await response.json();
