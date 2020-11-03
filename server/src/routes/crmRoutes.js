@@ -6,14 +6,14 @@ import { addNewQuestion,
 } from '../controllers/crmController';
 
 const routes = (app) => {
-    app.route('/question')
+    app.route('/api/question')
         // Get all Questions
         .get(getQuestions)
 
         // Create new Question
         .post(addNewQuestion);
 
-    app.route('/question/:questionID')
+    app.route('/api/question/:questionID')
         // Get specific Question by ID
         .get(getQuestionByID)
 
